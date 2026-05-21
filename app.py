@@ -70,7 +70,7 @@ with col1:
 
             st.success("Successfully logged in")
 
-except Exception as e:
+        except: Exception as e:
     st.error(f"Login error: {e}")
 
 with col2:
@@ -85,8 +85,7 @@ with col2:
             })
 
             st.success("Account created")
-
-except Exception as e:
+        except: Exception as e:
     st.error(f"Account creation error: {e}")
 
 # ====================================
