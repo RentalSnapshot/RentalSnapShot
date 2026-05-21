@@ -70,8 +70,8 @@ with col1:
 
             st.success("Successfully logged in")
 
-        except:
-            st.error("Login error")
+except Exception as e:
+    st.error(f"Login error: {e}")
 
 with col2:
 
@@ -86,8 +86,8 @@ with col2:
 
             st.success("Account created")
 
-        except:
-            st.error("Account creation error")
+except Exception as e:
+    st.error(f"Account creation error: {e}")
 
 # ====================================
 # APPLICATION
@@ -230,7 +230,7 @@ if st.session_state.user:
             "analyses_count": 1,
 
             "created_at":
-            datetime.utcnow().isoformat()
+            datetime.utcnow().isoformat(timespec="seconds")
 
         }).execute()
 
